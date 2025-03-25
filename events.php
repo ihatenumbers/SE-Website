@@ -41,7 +41,7 @@
     <h3>Special Events</h3>
     <div class="event-cards">
       <div class="event-card">
-        <img src="images/event1.jpg" alt="Event">
+        <!-- <img src="images/event1.jpg" alt="Event"> -->
         <h4>Christmas Celebration</h4>
         <p>December 24, 7:00 PM</p>
       </div>

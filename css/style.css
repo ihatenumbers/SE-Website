@@ -859,7 +859,7 @@
   .info-card {
     display: flex;
     align-items: center;
-    margin-bottom: 1rem;
+    margin-top: 1rem;
   }
 
   .info-card i {

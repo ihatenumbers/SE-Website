@@ -33,7 +33,7 @@
   <section class="content-section">
     <div class="history-section">
       <h3>Our History</h3>
-      <p>Founded in 1995, NCMH Church has been a beacon of faith in our community...</p>
+      <p>Founded in 1995, Chapel of Our Lady of Miraculous Medal at the National Center for Mental Health (NCMH) has been a beacon of faith in our community...</p>
       <img src="images/allofus.jpg" alt="Church History" class="history-img">
     </div>
   </section>

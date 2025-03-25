@@ -36,6 +36,12 @@
       <div class="info-card">
         <p><i class="fas fa-map-marker-alt"></i>9 De Febrero st. Baranggay Mauway National Center for Mental Health, Mandaluyong, Philippines</p>
       </div>
+      <div class="info-card">
+        <p><i class="fas fa-phone"></i>+63 2 8531 9001</p>
+      </div>
+      <div class="info-card">
+        <p><i class="fas fa-envelope"></i>olmmcncmh@gmail.com</p>
+      </div>
       <!-- More contact info -->
     </div>
   </section>

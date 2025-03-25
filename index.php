@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>NCMH CHURCH - Join Us!</title>
+  <title>CHAPEL OF NCMH - Join Us!</title>
   <link rel="stylesheet" href="css/style.css">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
   <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -29,9 +29,9 @@
   <!-- Header Section -->
   <header>
     <div class="logo-container">
-      <img src="images/ncmh_logo.png" alt="NCMH Church Logo" class="logo">
+      <img src="images/ncmh_logo.png" alt="Chapel of NCMH Logo" class="logo">
     </div>
-    <h1>Welcome to NCMH Church</h1>
+    <h1>Welcome to Chapel of NCMH</h1>
     <h2>Our Lady of Miraculous Medal</h2>
     <p>Join us in worship, community, and growth!</p>
   </header>
