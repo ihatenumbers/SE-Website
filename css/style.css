@@ -440,3 +440,54 @@
   .social-icon {
     display: inline-block;
   }
+
+  /* Page-specific styles */
+  .history-img {
+    max-width: 100%;
+    border-radius: 8px;
+    margin: 1rem 0;
+  }
+
+  .belief-card, .event-card, .ministry-card {
+    background: white;
+    padding: 1.5rem;
+    border-radius: 8px;
+    box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+    margin: 1rem;
+  }
+
+  .belief-card i {
+    font-size: 2rem;
+    color: #DEB64B;
+    margin-bottom: 1rem;
+  }
+
+  .contact-form {
+    max-width: 600px;
+    margin: 0 auto;
+  }
+
+  .contact-form input,
+  .contact-form textarea {
+    width: 100%;
+    padding: 0.8rem;
+    margin-bottom: 1rem;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+  }
+
+  .info-card {
+    display: flex;
+    align-items: center;
+    margin-bottom: 1rem;
+  }
+
+  .info-card i {
+    margin-right: 1rem;
+    color: #DEB64B;
+  }
+
+  nav a.active {
+    color: #fbbf24;
+    font-weight: bold;
+  }

@@ -12,15 +12,22 @@
 </head>
 <body>
 
-  <!-- Navigation Bar -->
-  <nav>
-    <a href="#"><i class="fas fa-home"></i> Home</a>
-    <a href="#"><i class="fas fa-cross"></i> About</a>
-    <a href="#"><i class="fas fa-calendar-alt"></i> Events</a>
-    <a href="#"><i class="fas fa-pray"></i> Services</a>
-    <a href="#"><i class="fas fa-hands-praying"></i> Join Us</a>
-    <a href="#"><i class="fas fa-envelope"></i> Contact</a>
-  </nav>
+  <!-- Include Navigation -->
+  <div id="nav-placeholder"></div>
+  <script>
+    fetch('navigation.html')
+      .then(response => response.text())
+      .then(data => {
+        document.getElementById('nav-placeholder').innerHTML = data;
+        // Set active link
+        const currentPage = window.location.pathname.split('/').pop() || 'index.html';
+        document.querySelectorAll('nav a').forEach(link => {
+          if (link.getAttribute('href') === currentPage) {
+            link.classList.add('active');
+          }
+        });
+      });
+  </script>
   
   <!-- Header Section -->
   <header>
@@ -204,29 +211,15 @@
   </div>
 </section>
 
-<!-- Footer Section with Social Media Icons -->
-<footer class="footer-section">
-  <div class="container">
-    <div class="footer-content text-center">
-      <p class="footer-text text-xl font-semibold text-gray-800">Connect with Us</p>
-      <div class="social-icons mt-6">
-        <a href="https://facebook.com" target="_blank" class="social-icon">
-          <img src="https://img.icons8.com/ios/50/ffffff/facebook.png" alt="Facebook" />
-        </a>
-        <a href="https://instagram.com" target="_blank" class="social-icon">
-          <img src="https://img.icons8.com/ios/50/ffffff/instagram-new.png" alt="Instagram" />
-        </a>
-        <a href="https://twitter.com" target="_blank" class="social-icon">
-          <img src="https://img.icons8.com/ios/50/ffffff/twitter.png" alt="Twitter" />
-        </a>
-        <a href="https://youtube.com" target="_blank" class="social-icon">
-          <img src="https://img.icons8.com/ios/50/ffffff/youtube.png" alt="YouTube" />
-        </a>
-      </div>
-      <p class="footer-text text-sm text-gray-600 mt-4">&copy; 2025 Church NCMH. All rights reserved.</p>
-    </div>
-  </div>
-</footer>
+<!-- Include Footer -->
+<div id="footer-placeholder"></div>
+<script>
+  fetch('footer.html')
+    .then(response => response.text())
+    .then(data => {
+      document.getElementById('footer-placeholder').innerHTML = data;
+    });
+</script>
 
 </body>
 </html>

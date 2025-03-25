@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Contact Us - NCMH Church</title>
+  <link rel="stylesheet" href="css/style.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+</head>
+<body>
+  <!-- Include Navigation -->
+  <div id="nav-placeholder"></div>
+  <script>
+    fetch('navigation.html')
+      .then(response => response.text())
+      .then(data => {
+        document.getElementById('nav-placeholder').innerHTML = data;
+        // Set active link
+        const currentPage = window.location.pathname.split('/').pop() || 'index.html';
+        document.querySelectorAll('nav a').forEach(link => {
+          if (link.getAttribute('href') === currentPage) {
+            link.classList.add('active');
+          }
+        });
+      });
+  </script>
+
+  <header>
+    <div class="logo-container">
+      <img src="images/logo-placeholder.png" alt="NCMH Church Logo" class="logo">
+    </div>
+    <h1>Get In Touch</h1>
+    <h2>We'd Love to Hear From You</h2>
+  </header>
+
+  <section class="content-section">
+    <div class="contact-info">
+      <h3>Contact Information</h3>
+      <div class="info-card">
+        <i class="fas fa-map-marker-alt"></i>
+        <p>123 Church Street, City</p>
+      </div>
+      <!-- More contact info -->
+    </div>
+  </section>
+
+  <section class="content-section">
+    <h3>Send Us a Message</h3>
+    <form class="contact-form">
+      <!-- Form fields -->
+    </form>
+  </section>
+
+  <div id="footer-placeholder"></div>
+  <script>
+    fetch('footer.html')
+      .then(response => response.text())
+      .then(data => {
+        document.getElementById('footer-placeholder').innerHTML = data;
+      });
+  </script>
+</body>
+</html>
