@@ -11,7 +11,7 @@
   <!-- Include Navigation -->
   <div id="nav-placeholder"></div>
   <script>
-    fetch('navigation.html')
+    fetch('navigation.php')
       .then(response => response.text())
       .then(data => {
         document.getElementById('nav-placeholder').innerHTML = data;
@@ -118,7 +118,7 @@
 
   <div id="footer-placeholder"></div>
   <script>
-    fetch('footer.html')
+    fetch('footer.php')
       .then(response => response.text())
       .then(data => {
         document.getElementById('footer-placeholder').innerHTML = data;

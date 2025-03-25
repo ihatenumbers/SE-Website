@@ -19,7 +19,7 @@ function initNavigation() {
   }
   
   // Set active link
-  const currentPage = window.location.pathname.split('/').pop() || 'index.html';
+  const currentPage = window.location.pathname.split('/').pop() || 'index.php';
   document.querySelectorAll('.nav-links a').forEach(link => {
     if (link.getAttribute('href') === currentPage) {
       link.classList.add('active');
