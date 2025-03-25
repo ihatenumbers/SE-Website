@@ -20,21 +20,21 @@
 
     <!-- Login Modal -->
     <div id="loginModal" class="modal">
-      <div class="modal-content">
-        <span class="close">&times;</span>
-        <h2>Login</h2>
+      <div class="modal-content" style="background: linear-gradient(135deg, rgba(107, 79, 61, 0.95) 0%, rgba(139, 69, 19, 0.95) 100%); color: white;">
+        <span class="close" style="color: white;">&times;</span>
+        <h2 style="color: var(--secondary); text-align: center; font-family: 'Playfair Display', serif;">Welcome Back</h2>
         <form id="loginForm" method="POST">
           <div class="form-group">
-            <label for="login_user_id">User ID</label>
-            <input type="text" id="login_user_id" name="user_id" required>
+            <label for="login_user_id" style="color: white;">User ID</label>
+            <input type="text" id="login_user_id" name="user_id" required style="background: rgba(255,255,255,0.1); border: 1px solid var(--secondary); color: white;">
           </div>
           <div class="form-group">
-            <label for="login_password">Password</label>
-            <input type="password" id="login_password" name="password" required>
+            <label for="login_password" style="color: white;">Password</label>
+            <input type="password" id="login_password" name="password" required style="background: rgba(255,255,255,0.1); border: 1px solid var(--secondary); color: white;">
           </div>
-          <button type="submit" class="save-btn">Login</button>
+          <button type="submit" class="save-btn" style="background-color: var(--secondary); color: #333; font-weight: bold; padding: 12px; margin-top: 20px;">Login</button>
         </form>
-        <div id="loginError" class="error-message"></div>
+        <div id="loginError" class="error-message" style="display: none;"></div>
       </div>
     </div>
     <div class="hamburger">

@@ -55,16 +55,33 @@ function initLoginModal() {
       loginForm.addEventListener('submit', async (e) => {
         e.preventDefault();
         const formData = new FormData(loginForm);
-        const response = await fetch('login.php', {
-          method: 'POST',
-          body: formData
-        });
-        const result = await response.json();
-        
-        if (result.success) {
-          handleSuccessfulLogin();
-        } else {
-          document.getElementById('loginError').textContent = result.message;
+        try {
+          const response = await fetch('login.php', {
+            method: 'POST',
+            body: formData,
+            headers: {
+              'Accept': 'application/json'
+            }
+          });
+          
+          if (!response.ok) {
+            throw new Error('Network response was not ok');
+          }
+          
+          const result = await response.json();
+          
+          if (result.success) {
+            handleSuccessfulLogin(result);
+          } else {
+            const errorDiv = document.getElementById('loginError');
+            errorDiv.textContent = result.message || 'Login failed';
+            errorDiv.style.display = 'block';
+          }
+        } catch (error) {
+          const errorDiv = document.getElementById('loginError');
+          errorDiv.textContent = 'An error occurred during login. Please try again.';
+          errorDiv.style.display = 'block';
+          console.error('Login error:', error);
         }
       });
     }
@@ -80,7 +97,7 @@ if (!document.getElementById('logoutBtn')) {
 }
 
 // Handle successful login
-function handleSuccessfulLogin() {
+function handleSuccessfulLogin(result) {
   // Update the navigation immediately
   const loginBtn = document.getElementById('loginBtn');
   if (loginBtn) {
@@ -98,8 +115,8 @@ function handleSuccessfulLogin() {
     modal.style.display = 'none';
   }
   
-  // Redirect if specified
-  if (result.redirect) {
+  // Redirect if specified in the result
+  if (result && result.redirect) {
     window.location.href = result.redirect;
   }
 }
