@@ -5,18 +5,21 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>NCMH CHURCH - Join Us!</title>
   <link rel="stylesheet" href="css/style.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 
 </head>
 <body>
 
   <!-- Navigation Bar -->
   <nav>
-    <a href="#">Home</a>
-    <a href="#">About</a>
-    <a href="#">Events</a>
-    <a href="#">Services</a>
-    <a href="#">Join Us</a>
-    <a href="#">Contact</a>
+    <a href="#"><i class="fas fa-home"></i> Home</a>
+    <a href="#"><i class="fas fa-cross"></i> About</a>
+    <a href="#"><i class="fas fa-calendar-alt"></i> Events</a>
+    <a href="#"><i class="fas fa-pray"></i> Services</a>
+    <a href="#"><i class="fas fa-hands-praying"></i> Join Us</a>
+    <a href="#"><i class="fas fa-envelope"></i> Contact</a>
   </nav>
   
   <!-- Header Section -->
@@ -80,11 +83,25 @@
  <style>
 	body
      .hero-section {
-      background: url('images/Churchpic.jpg') no-repeat center center;
-      background-size: cover;
+      background: linear-gradient(rgba(139, 69, 19, 0.7), rgba(139, 69, 19, 0.7)), 
+                  url('images/Churchpic.jpg') center/cover no-repeat;
       color: white;
       text-align: center;
-      padding: 5rem 0;
+      padding: 8rem 2rem;
+      position: relative;
+    }
+
+    .hero-section h2 {
+      font-family: 'Playfair Display', serif;
+      font-size: 3.5rem;
+      text-shadow: 2px 2px 4px rgba(0,0,0,0.5);
+      margin-bottom: 1.5rem;
+    }
+
+    .hero-section p {
+      font-size: 1.3rem;
+      max-width: 800px;
+      margin: 0 auto 2rem;
     }
  </style>
 
